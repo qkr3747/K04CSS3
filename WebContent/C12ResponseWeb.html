@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C12ResponseWeb.html</title>
+</head>
+
+<style type="text/css">
+    /* 전체선택자를 통해 문서의 기본스타일 지정 */
+    *{margin:0; padding: 0; font-family:verdana;} 
+
+    /* 
+    blodck 엘리먼트 자체에 대한 가운데 정렬을 위해 margin을 사용한다.
+    적용되지 않는 브라우저가 있다면 text-align을 통해 정렬한다.
+    */
+    #AllWrap{
+        margin:0 auto; text-align:center;
+    }
+    #PartWrap{
+        width: 100%; text-align:left;
+        border:1px solid blue;
+    }
+    #header {
+        border:1px solid blue; text-align:center; 
+        height: 100%; line-height:100px;
+    }
+
+    /* 
+        li태그의 기본 블릿을 제거한다.
+        overflow의 속성
+            visible : 컨텐츠가 박스를 넘어가도 보이게 처리
+            hidden : 박스를 벗어난 부분은 숨김처리
+            scroll : 컨텐츠의 크기와 상관없이 스크롤바 생김
+            auto : 컨텐츠의 크기에 따라 스크롤바가 토그됨.
+    */
+    #nav ul{
+        list-style:none;
+        overflow:auto;
+    }
+    #nav ul li{
+        font-size:1.5em; font-weight:bold; height:50px; 
+        width:20%; float:left; border:1px solid blue; 
+        text-align:center; line-height:50px; 
+        /* 전체넓이 패딩과 보더를 포함하여 지정한다. */
+        box-sizing: border-box;
+    }
+    #ContentWrap #content > h2{
+        border-bottom:1px #808080 solid; 
+        font-size: 2em;
+    }
+    #content{
+        
+        padding:20px;
+    }
+    #footer{
+        font-size:2em; font-weight:bold; height:100px; 
+        line-height:100px; text-align:center; 
+        border:1px solid blue;
+    }
+
+    /* 스크린의 크기가 640이하 일때의 화면설정 */
+    @media screen and (max-width:640px) {
+        #Allwrap { width: 100%; } 
+        #content p{
+            font-size:2em; color:black;
+        }
+    }
+
+    /* 
+        반응형웹을 구현하기 위해 미디어쿼리를 사용한다.
+        디바이스(단말기)의 해상도에 따라 다른 형태의 화면을 보여주게 된다.
+        이경우 모방일용 웹화면을 별도로 제작하지 않아도 되므로 편리하다.
+    */
+    /* 스크린의 크기가 641~999사이일때 설정 */
+    @media screen and (min-width:1000px) {
+        #AllWrap{ width:80%; } 
+        #content p{
+            font-size: 1em; color:green;
+        }
+    }
+
+    /* 1000 이상일때의 설정 */
+    @media screen and (min-width:641px) and (max-width:999px) {
+        #Allwrap{ width: 100%; }
+        #content p{
+            font-size:1.5em; color:red; background-color:black;
+        }
+    }
+</style>
+
+    
+<body> 
+<div id="AllWrap">
+    <div id="PartWrap">
+        <div id="header">
+            <h1>HEADER</h1> 
+        </div> 
+        <div id="nav"> 
+            <ul>
+                <li>메뉴1</li> 
+                <li>메뉴2</li> 
+                <li>메뉴3</li> 
+                <li>메뉴4</li>
+                <li>메뉴5</li> 
+            </ul> 
+        </div> 
+    </div> 
+    <div id="ContentWrap"> 
+        <div id="content">
+                <h2>청와대, 홍남기 해임청원에 “경제위기 극복 매진해와”</h2> 
+                <p>
+                    청와대가 홍남기 기획재정부장관 겸 경제부총리를 해임하라는 국민청원에 대해 “홍남기 경제부총리를 비롯해 정부는 코로나19로 인한 경제위기 극복에 매진해 왔다”며 완곡하게 불가하다는 입장을 밝혔다.
+
+                    청와대는 10일 △9월2일 공개된 “대주주 양도소득세는 이제는 폐기되어야 할 악법입니다” (21만6844명 동의) △10월5일 공개된 “홍남기 기재부 장관 해임을 강력히 요청합니다” (24만2187명 동의) 등 두가지 청원글에 답변했다.
+                    
+                    두 청원은 양도세 부과대상 확대 정책에 대한 비판을 공통적으로 담고 있다. ‘대주주 양도세 폐기’ 청원인은 “대주주 양도세는 정책목표도 불확실하고, 증시의 불확실성만 증폭시키고, 국민만 고생시키는 잘못된 정책”이라면서 10가지 폐기 이유를 주장했다. 현행법상 본인이 대주주인지 인지하기 어려워 불이익을 받은 경우가 있고, 대주주 기준을 단일종목 3억으로 삼는 건 ‘현대판 연좌제’라는 내용 등이다. ‘홍남기 부총리 해임’ 청원인의 경우 “대주주 3억에 대한 폐지 또는 유예에 반대입장을 고수하는 기재부장관 해임을 강력히 요청드린다”고 주장한 바 있다.
+                    
+                    출처 : 미디어오늘(http://www.mediatoday.co.kr) 
+                </p> 
+            </div> 
+        </div> 
+        <div id="footer">
+            <h1>FOOTER</h1> 
+        </div> 
+    </div> 
+</body>
+</html>

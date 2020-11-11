@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C11MediaImport.html</title>
+    <style>
+        /* 
+        @import
+        - <link> 태그를 대체할 수 있다.
+        - style 태그안에서 사용해야 하고 반드시 최상단에 선언해야한다.
+        - CSS파일에 오류가 있는경우 다운로드 하지 않는다.
+        */
+        @import url('./style/import.css'); 
+        .content{
+            background-color:black; color:red;
+        }
+
+        /* 
+        @meida
+        - 해당 웹페이지를 디바이스의 종류에 따라 각각 다르게 화면을 구성을 할 수 있게 해주는 기능을 가지고있다.
+        
+        */
+        @media screen{ 
+            .content{
+                background-color:black; color: white;
+            }
+        }
+        @media print{ 
+            .content{
+                background-color:red; color:yellow;
+            }
+        }
+        </style>
+        
+</head>
+<body>
+    <h2>media 속성</h2> 
+    <div class="content"> 
+        <p>
+            <h3>청와대, 홍남기 해임청원에 “경제위기 극복 매진해와”</h3>
+            청와대가 홍남기 기획재정부장관 겸 경제부총리를 해임하라는 국민청원에 대해 “홍남기 경제부총리를 비롯해 정부는 코로나19로 인한 경제위기 극복에 매진해 왔다”며 완곡하게 불가하다는 입장을 밝혔다.
+
+            청와대는 10일 △9월2일 공개된 “대주주 양도소득세는 이제는 폐기되어야 할 악법입니다” (21만6844명 동의) △10월5일 공개된 “홍남기 기재부 장관 해임을 강력히 요청합니다” (24만2187명 동의) 등 두가지 청원글에 답변했다.
+
+            두 청원은 양도세 부과대상 확대 정책에 대한 비판을 공통적으로 담고 있다. ‘대주주 양도세 폐기’ 청원인은 “대주주 양도세는 정책목표도 불확실하고, 증시의 불확실성만 증폭시키고, 국민만 고생시키는 잘못된 정책”이라면서 10가지 폐기 이유를 주장했다. 현행법상 본인이 대주주인지 인지하기 어려워 불이익을 받은 경우가 있고, 대주주 기준을 단일종목 3억으로 삼는 건 ‘현대판 연좌제’라는 내용 등이다. ‘홍남기 부총리 해임’ 청원인의 경우 “대주주 3억에 대한 폐지 또는 유예에 반대입장을 고수하는 기재부장관 해임을 강력히 요청드린다”고 주장한 바 있다.
+
+            출처 : 미디어오늘(http://www.mediatoday.co.kr) 
+        </p> 
+    </div> 
+</body>
+
+</html>
